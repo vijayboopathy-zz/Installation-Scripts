@@ -1,10 +1,13 @@
 #!/bin/bash
 # Install rbenv
 # Update repo
+echo Updating apt cache
 sudo apt update
 # Install Dependencies
+echo Installing Dependencies
 sudo apt install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 # Install
+echo Installing rbenv
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
@@ -15,6 +18,7 @@ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profil
 source ~/.bash_profile
 
 # Install Ruby
+echo Intstalling Ruby
 rbenv install -v 2.2.3
 rbenv global 2.2.3
 ruby -v
@@ -22,4 +26,5 @@ echo "gem: --no-document" > ~/.gemrc
 gem install bundler
 
 # Install Softcover
+echo Installing Softcover
 gem install softcover
