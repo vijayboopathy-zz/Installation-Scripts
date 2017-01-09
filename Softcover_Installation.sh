@@ -20,3 +20,6 @@ rbenv global 2.2.3
 ruby -v
 echo "gem: --no-document" > ~/.gemrc
 gem install bundler
+
+# Install Softcover
+gem install softcover
