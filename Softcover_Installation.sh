@@ -3,28 +3,22 @@
 # Update repo
 echo Updating apt cache
 sudo apt update
-# Install Dependencies
-echo Installing Dependencies
-sudo apt install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
-# Install
-echo Installing rbenv
-cd
-git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
 
 # Install Ruby
-echo Intstalling Ruby
-rbenv install -v 2.2.3
-rbenv global 2.2.3
-ruby -v
-echo "gem: --no-document" > ~/.gemrc
-gem install bundler
+echo Installing Ruby 1.9.3
+sudo apt-get install ruby-full
+sudo apt-get install ruby1.9.1-dev
+
+# Install Gem
+echo Installting Ruby-Gems
+cd /tmp \ &&
+    wget https://rubygems.org/rubygems/rubygems-2.6.10.tgz && \
+        tar -xvf rubygems-2.6.10.tgz && \
+	cd rubygems-2* && \
+	sudo ruby setup.rb && \
+	rm -rf rubygems-2.6.10*
 
 # Install Softcover
 echo Installing Softcover
-gem install softcover
+sleep 2;
+sudo gem install softcover
