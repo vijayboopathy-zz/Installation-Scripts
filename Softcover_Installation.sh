@@ -18,6 +18,9 @@ cd /tmp \ &&
 	sudo ruby setup.rb && \
 	rm -rf rubygems-2.6.10*
 
+# Install Dependencies
+sudo apt install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
+
 # Install Softcover
 echo Installing Softcover
 sleep 2;
