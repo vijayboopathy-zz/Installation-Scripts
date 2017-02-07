@@ -6,8 +6,8 @@ sudo apt update
 
 # Install Ruby
 echo Installing Ruby 1.9.3
-sudo apt-get install ruby-full
-sudo apt-get install ruby1.9.1-dev
+sudo apt-get install ruby-full -y
+sudo apt-get install ruby1.9.1-dev -y
 
 # Install Gem
 echo Installting Ruby-Gems
@@ -19,7 +19,7 @@ cd /tmp \ &&
 	rm -rf rubygems-2.6.10*
 
 # Install Dependencies
-sudo apt install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
+sudo apt install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs -y
 
 # Install Softcover
 echo Installing Softcover
