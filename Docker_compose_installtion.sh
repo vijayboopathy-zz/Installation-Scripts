@@ -6,4 +6,4 @@ sudo apt update
 sudo apt install python-pip -y
 
 # Install Docker Compose
-sudo pip install docker-compose -y
+sudo pip install docker-compose
